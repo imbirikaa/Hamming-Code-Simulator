@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamming Code Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hamming Code Simulator</h1>
+      <div class="input-section">
+        <label for="dataInput">Enter Data (4, 8, or 16 bits):</label>
+        <input type="text" id="dataInput" maxlength="16" />
+        <button onclick="calculateHammingCode()">Calculate Hamming Code</button>
+      </div>
+      <div class="output-section">
+        <h2>Hamming Code:</h2>
+        <p id="hammingCodeOutput"></p>
+      </div>
+      <div class="error-section">
+        <h2>Error Introduction</h2>
+        <label for="errorBit"
+          >Enter the above code with flipping ONE bit :</label
+        >
+        <input type="text" id="errorInput" maxlength="21" />
+        <button onclick="introduceError()">Find The Error</button>
+        <p id="errorOutput"></p>
+      </div>
+      <div class="correction-section">
+        <h2>Error Correction</h2>
+        <button onclick="correctError()">Correct Error</button>
+        <p id="correctionOutput"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
